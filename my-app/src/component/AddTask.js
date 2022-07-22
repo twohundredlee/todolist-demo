@@ -1,13 +1,14 @@
+
 import React, { useState } from 'react';
 
-const AddTask = ({ Add }) => {
+const AddTask = ({ onAdd }) => {
     const [value, setValue] = useState('');
 
     const onChange = (e) => {
         setValue(e.target.value);
     }
     const addItem = (e) => {
-        Add(value);
+        onAdd(value);
         setValue('');
     }
 
